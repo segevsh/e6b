@@ -19,7 +19,7 @@ export interface WindCorrectionParams {
     trueAirSpeed: number;
     windDir: number;
     windVelocity: number;
-};
+}
 
 /**
  * calculate the delta between the angles 

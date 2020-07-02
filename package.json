@@ -4,6 +4,7 @@
   "description": "E6B library - mostly for flight training and traditional flight plans and preflight planning",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./src --ext .ts", 
     "test": "mocha -r ts-node/register tests/**/*.test.ts"
   },
   "repository": {
@@ -18,6 +19,8 @@
   "homepage": "https://github.com/segevsh/e6b#readme",
   "devDependencies": {
     "@types/jest": "^26.0.3",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
     "eslint": "^7.3.1",
     "jest": "^26.1.0",
     "ts-jest": "^26.1.1",
