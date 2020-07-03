@@ -15,8 +15,14 @@ Some of the calculations included:
  - Fuel consumption
 
 ## Usage
-Install e6b-lib using [npm](https://www.npmjs.com/package/e6b-lib):
+Installing using npm 
+```bash
+$ npm install e6b-lib
+```
 
-    npm install e6b-lib
+Installing using yarn
+```bash
+$ yarn add e6b-lib
+```
 
 
