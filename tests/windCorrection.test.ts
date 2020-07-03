@@ -13,7 +13,6 @@ describe('Wind correction tests', () => {
             windVelocity: 7
         });
 
-        console.log(res1);
         expect(res1).toBeTruthy();
         expect(res1.windCorrectionAngle).toBe(4);
 

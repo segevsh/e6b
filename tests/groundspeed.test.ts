@@ -11,6 +11,5 @@ describe('groundSpeed tests', () => {
         expect(res1.formatted).toBe('00:03:57');
         expect(res1.minutes).toBe(3.95);
         expect(res1.seconds).toBe(236.84);
-        console.log(res1);
     });
 });

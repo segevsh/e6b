@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/segevsh/e6b.git"
   },
-  "author": "",
+  "author": "Segev {CJ} Shmueli",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/segevsh/e6b/issues"
@@ -29,7 +29,5 @@
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
   },
-  "dependencies": {
-    "lodash": "^4.17.15"
-  }
+  "dependencies": {}
 }

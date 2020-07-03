@@ -9,6 +9,5 @@ describe('fuel tests', () => {
         const res1 = fuelRequired(3.95, 7);
         expect(res1).toBeTruthy();
         expect(res1).toBe(0.46);
-        console.log(res1);
     });
 });
