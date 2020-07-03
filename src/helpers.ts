@@ -19,8 +19,25 @@ const fromRadian = (value: number): number => {
 }
 
 
+const round = (value: number, precision: number): number => {
+    const m = 10 ** precision;
+    return Math.round(value * m) / m;
+}
+
+const padLeft = (value: string, padder: string, minSize: number): string => {
+    let padded = value;
+
+    while (padded.length < minSize) {
+        padded = `${padder}${padded}`;
+    }
+
+    return padded;
+}
+
 
 export {
-    toRadian, 
-    fromRadian
+    toRadian,
+    fromRadian,
+    round, 
+    padLeft
 }

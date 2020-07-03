@@ -1,13 +1,13 @@
 {
   "name": "e6b-lib",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "E6B library - mostly for flight training and traditional flight plans and preflight planning",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "lint": "eslint ./src --ext .ts", 
-    "test": "jest ./tests", 
-    "build":  "npm test && npm run lint && tsc -d"
+    "lint": "eslint ./src --ext .ts",
+    "test": "jest ./tests",
+    "build": "npm test && npm run lint && tsc -d"
   },
   "repository": {
     "type": "git",
