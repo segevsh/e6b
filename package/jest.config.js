@@ -3,13 +3,6 @@ module.exports = {
     // setupFilesAfterEnv: ['./jest.setup.js'],
     testEnvironment: 'node',
 
-    "globals":  {
-        "ts-jest": {
-
-            "tsConfig": "<rootDir>/tsconfig.spec.json",
-        }
-    },
-
     "roots": [
         "<rootDir>/tests",
         "<rootDir>/src",
