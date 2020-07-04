@@ -1,5 +1,7 @@
 /// <reference types="@types/jest" />
-import converters from '../src/lib/converters';
+import { converters } from '../src/index';
+
+// import converters from '../src/lib/converters';
 
 describe('converters tests', () => {
 
