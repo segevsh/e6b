@@ -9,10 +9,12 @@ Some of the calculations included:
 
 ## Features
 
-- Wind correction calculator
 - Groundspeed calculator
 - ETE (estimated time enroute)
 - Fuel consumption
+- Wind correction calculator
+- Wind components
+- Converters (distances, measurements, etc...)
 
 ## Getting started
 
@@ -32,7 +34,9 @@ yarn add e6b-lib
 
 ### Usage
 
+Calculating wind correction
 ```typescript
+
 import { windCorrection } from "e6b-lib";
 
 const wc = windCorrection({
@@ -47,4 +51,34 @@ console.log(wc.windCorrectionAngle); // -2
 console.log(wc.trueHeading); // 298
 console.log(wc.magneticHeading); // 310 
 console.log(wc.groundSpeed); // 77 
+```
+
+Calculating wind components (crosswind / headwind)
+
+```typescript
+
+import { windComponents } from "e6b-lib";
+
+ const wc = windComponents({
+    runway: 4, // runway 04
+    windDirection: 50, 
+    windSpeed: 10
+});
+
+console.log(wc.crossWind); // 1.74
+console.log(wc.headWind); // 9.85
+```
+
+### Converters
+Converting different units relevant to aviation
+```typescript
+import { converters } from 'e6b-lib';
+
+// partial example 
+console.log(converters.distances.NauticalMileToStatueMile(2)); // 2.3
+console.log(converters.distances.StatueMileToNauticalMile(1)); //0.87
+console.log(converters.distances.feetToMeters(3)); //0.91
+console.log(converters.measurements.InHgToHpa(29.92)); // 1013.21
+
+// other converters are available, use intellisense to discover them
 ```

@@ -13,6 +13,7 @@ describe('Wind components tests', () => {
         });
 
         console.log(res1);
+
         expect(res1).toBeTruthy();
         expect(res1.crossWind).toBe(1.74);
         expect(res1.headWind).toBe(9.85);
