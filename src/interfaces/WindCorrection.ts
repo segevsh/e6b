@@ -23,3 +23,13 @@ export interface WindCorrectionResult {
     groundSpeed?: number;
 }
 
+export interface WindComponentsParams {
+    runway: number,
+    windDirection: number,
+    windSpeed: number
+}
+
+export interface WindComponentsResult {
+    headWind: number;
+    crossWind: number;
+}
