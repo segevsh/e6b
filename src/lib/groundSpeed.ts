@@ -10,7 +10,7 @@
  */
 
 import { FlightTimeResults } from "../interfaces/GroundSpeed";
-import { round, padLeft } from '../helpers';
+import { round, padLeft } from '../utils';
 
 /**
  * Calculates the time it will take to fly given distance 

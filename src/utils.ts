@@ -34,10 +34,9 @@ const padLeft = (value: string, padder: string, minSize: number): string => {
     return padded;
 }
 
-
 export {
     toRadian,
     fromRadian,
-    round, 
-    padLeft
+    round,
+    padLeft, 
 }

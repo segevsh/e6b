@@ -14,7 +14,7 @@ import { WindComponentsResult, WindComponentsParams } from "../interfaces/WindCo
 import {
     toRadian,
     round
-} from '../helpers';
+} from '../utils';
 
 /**
  * 

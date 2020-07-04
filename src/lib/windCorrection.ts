@@ -12,7 +12,7 @@
 import {
     fromRadian,
     toRadian
-} from '../helpers';
+} from '../utils';
 import { WindCorrectionParams, WindCorrectionResult } from '../interfaces/WindCorrection';
 
 /**
