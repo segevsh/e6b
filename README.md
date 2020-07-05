@@ -68,17 +68,3 @@ import { windComponents } from "e6b-lib";
 console.log(wc.crossWind); // 1.74
 console.log(wc.headWind); // 9.85
 ```
-
-### Converters
-Converting different units relevant to aviation
-```typescript
-import { converters } from 'e6b-lib';
-
-// partial example 
-console.log(converters.distances.NauticalMileToStatueMile(2)); // 2.3
-console.log(converters.distances.StatueMileToNauticalMile(1)); //0.87
-console.log(converters.distances.feetToMeters(3)); //0.91
-console.log(converters.measurements.InHgToHpa(29.92)); // 1013.21
-
-// other converters are available, use intellisense to discover them
-```
