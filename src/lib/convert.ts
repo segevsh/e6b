@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2020 - Segev {CJ} Shmueli
+ *
+ * @summary Conversion methods
+ * @author Segev {CJ} Shmueli <cj@segevs.com>
+ *
+ * Created: 7/5/2020
+ */
 import * as converters from './converters';
 import { requiredVariable } from '../utils';
 import { ConversionUnit, ConversionCategory } from '../interfaces/Conversions';

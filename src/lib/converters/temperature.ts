@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2020 - Segev {CJ} Shmueli
+ *
+ * @summary Convert temperature units
+ * @author Segev {CJ} Shmueli <cj@segevs.com>
+ *
+ * Created: 7/5/2020
+ */
 import { ConversionCategory } from "../../interfaces/Conversions";
 
 const fahrenheitToCelsius = (value: number): number => {

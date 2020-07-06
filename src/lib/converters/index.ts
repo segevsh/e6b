@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2020 - Segev {CJ} Shmueli
+ *
+ * @summary 
+ * @author Segev {CJ} Shmueli <cj@segevs.com>
+ *
+ * Created: 7/5/2020
+ */
 import { ConversionUnit } from '../../interfaces/Conversions';
 
 export { length } from './length';
