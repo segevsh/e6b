@@ -64,7 +64,7 @@ export const convert = (value: number | bigint) => {
                     }
 
                     if (convertFrom.fn && convertFrom.fn[toUnit]) {
-                        return convertFrom.fn[toUnit](value);
+                        return convertFrom.fn[toUnit](Number(value));
                     }
 
                     const convertTo = getConverter(cat, toUnit);
