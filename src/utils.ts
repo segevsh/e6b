@@ -19,9 +19,11 @@ const fromRadian = (value: number): number => {
 }
 
 
-const round = (value: number, precision: number): number => {
+const round = (value: number | bigint, precision: number): number => {
     const m = 10 ** precision;
-    return Math.round(value * m) / m;
+
+    // casting into a number will take care of BigInt
+    return Math.round(Number(value) * Number(m)) / m;
 }
 
 const padLeft = (value: string, padder: string, minSize: number): string => {
@@ -34,9 +36,16 @@ const padLeft = (value: string, padder: string, minSize: number): string => {
     return padded;
 }
 
+const requiredVariable = (value: unknown, errorMessage?: string) => {
+    if (!value) {
+        throw new Error(errorMessage || `General error, expected value`);
+    }
+}
+
 export {
     toRadian,
     fromRadian,
     round,
-    padLeft, 
+    padLeft,
+    requiredVariable,
 }

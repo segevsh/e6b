@@ -68,3 +68,17 @@ import { windComponents } from "e6b-lib";
 console.log(wc.crossWind); // 1.74
 console.log(wc.headWind); // 9.85
 ```
+
+
+### Conversions
+You can convert between different unites in different categories : `pressure`, `temperature`, `mass`, `length`, `time` 
+
+```typescript
+import { convert, utils } from 'e6b-lib';
+
+console.log(utils.round(convert(1).from('mile').to('km'), 2)); // 1.61
+console.log(utils.round(convert(1).from('km').to('m'), 2)); // 1000
+console.log(utils.round(convert(0).from('C').to('F'), 2)); // 32
+console.log(utils.round(convert(32).from('fahrenheit').to('celsius'), 2)); // 0
+console.log(utils.round(convert(32).from('fahrenheit').to('kelvins'), 2)); // 273.15
+```
