@@ -24,5 +24,18 @@ describe('Wind correction tests', () => {
         });
         expect(res2).toBeTruthy();
         expect(res2.windCorrectionAngle).toBe(2);
+
+        const res3 = windCorrection({
+            trueCourse: 351,
+            windDir: 158,
+            trueAirSpeed: 80,
+            windVelocity: 16,
+            magneticVariation: 13
+        });
+
+        expect(res3).toBeTruthy();
+        expect(res3.windCorrectionAngle).toBe(3);
+        expect(res3.magneticHeading).toBe(7);
+        expect(res3.groundSpeed).toBe(96);
     });
 });

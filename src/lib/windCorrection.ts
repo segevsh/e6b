@@ -14,6 +14,7 @@ import {
     toRadian
 } from '../utils';
 import { WindCorrectionParams, WindCorrectionResult } from '../interfaces/WindCorrection';
+import { utils } from '..';
 
 /**
  * calculate the delta between the angles 
@@ -28,9 +29,11 @@ const directionDelta = (windDir: number, trueCourse: number): number => {
  * @param value 
  */
 const groundSpeed = (params: WindCorrectionParams, value: WindCorrectionResult): number => {
-    const cosParam = Math.cos(toRadian(params.trueCourse - params.windVelocity + value.windCorrectionAngle));
+    const rHeading = utils.toRadian(params.trueCourse);
+    const rWindDir = utils.toRadian(params.windDir);
+    const cosParam = Math.cos(rHeading - rWindDir);
     const sums = (params.trueAirSpeed ** 2) + (params.windVelocity ** 2) - (2 * params.trueAirSpeed * params.windVelocity * cosParam);
-    return Math.floor(Math.sqrt(sums));
+    return Math.round(Math.sqrt(sums));
 }
 
 
@@ -47,8 +50,11 @@ const windCorrection = (params: WindCorrectionParams): WindCorrectionResult => {
 
     const windCorrectionAngle = Math.round(fromRadian(correctionRad));
 
+    const magneticHeading = trueCourse + windCorrectionAngle + (magneticVariation || 0);
+
+
     const result: WindCorrectionResult = {
-        magneticHeading: trueCourse + windCorrectionAngle + (magneticVariation || 0),
+        magneticHeading: magneticHeading >= 360 ? magneticHeading - 360 : magneticHeading,
         trueHeading: trueCourse + windCorrectionAngle,
         windCorrectionAngle,
     }
